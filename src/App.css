@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #a9effc;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.apiRef{
+    color: yellow;
+}
+
+.red{color:red;}
+.green{color:green;}
+
+.blink {
+    animation: blinker 1s step-start infinite;
+ }
+.block{
+    display: block;
+}
