@@ -55,7 +55,7 @@ export const LineChart = ( {country} ) => {
         };
 
         fetchDailyData();
-    },[country]);
+    },[country, childUrl]);
 
     const dateOptions = {   
         day: 'numeric',

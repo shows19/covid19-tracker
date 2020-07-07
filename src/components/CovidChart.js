@@ -53,15 +53,17 @@ export const CovidChart = () => {
         //console.log("Country: ", e.target.value);
     };
 
-    useEffect(()=>{
+    const onChangeCountry = () => {
         //console.log("Country data ALL: ",countries);
         const a = countries.filter((item)=>(
             item.Country === country
         ));
         setCountryData(a[0]);
         //console.log("Country data: ",a);
-        
-    },[country]);
+
+    };
+
+    useEffect(onChangeCountry,[country]);
 
     useEffect(()=>{
         setSelectedStats( [

@@ -24,10 +24,12 @@ export const Cards = () => {
         getData();
     },[]);
     
-    useEffect(() => {
+    const onChangeData = () =>{
         setCountries(data.Countries);
         //console.log("Countries: ", data.Countries);
-    },[data]);
+    };
+
+    useEffect(onChangeData,[data]);
 
     const selectedStats = [
         {
