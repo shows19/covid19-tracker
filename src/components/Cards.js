@@ -49,13 +49,12 @@ export const Cards = () => {
         }
       ];    
     
-      let i=0;
     return (
         <div>
             <Grid container spacing={2} justify="center">
-                {selectedStats.map((item) => (
-                    <Grid item xs={12}>
-                        <StatusCard key={++i} stats = {item}/>
+                {selectedStats.map((item, idx) => (
+                    <Grid item xs={12} key={idx}>
+                        <StatusCard key={idx} stats = {item}/>
                     </Grid>
                 ))}
             </Grid>

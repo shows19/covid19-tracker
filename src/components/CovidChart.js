@@ -88,8 +88,6 @@ export const CovidChart = () => {
           
     },[countryData]);
 
-    let i=0;
-
     return (
         <div>
             <Typography variant="h6" className={classes.globalHeading} color="primary" >
@@ -99,6 +97,12 @@ export const CovidChart = () => {
                 <Grid container spacing={2} justify="center">
                     <Grid item xs={3} sm={2}>
                         <FormControl className={classes.formControl}>
+{/*                             <NativeSelect defaultValue='' onChange={handleChange}>
+                                <option value=''>-- Please select country --</option>
+                                {countries.map((item, idx) => (
+                                    <option value={item.Country} key={idx}>{item.Country}</option>
+                                ))}
+                            </NativeSelect> */}
                             <InputLabel id="country-label">Country</InputLabel>
                             <Select labelId="country-label" id="country" onChange={handleChange}
                              value ={country}>
@@ -111,9 +115,9 @@ export const CovidChart = () => {
                     </Grid>
                     <Grid item xs={9} sm={10}>
                         <Grid container spacing={1} justify="center">
-                            {selectedStats.map((item) => (
-                                <Grid item xs={4}>
-                                    <StatusCardCountry key={++i} stats = {item}/>
+                            {selectedStats.map((item, idx) => (
+                                <Grid item xs={4} key={idx}>
+                                    <StatusCardCountry key={idx} stats = {item}/>
                                 </Grid>
                             ))}
                         </Grid>
